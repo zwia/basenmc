@@ -1,0 +1,79 @@
+{
+  "name": "Message Edit",
+  "temp": "before",
+  "event-type": "26",
+  "_id": "IPReh",
+  "actions": [
+    {
+      "message": "1",
+      "varName": "after",
+      "info": "3",
+      "storage": "1",
+      "varName2": "author",
+      "name": "Store Message Info"
+    },
+    {
+      "message": "1",
+      "varName": "after",
+      "info": "4",
+      "storage": "1",
+      "varName2": "channel",
+      "name": "Store Message Info"
+    },
+    {
+      "message": "1",
+      "varName": "after",
+      "info": "15",
+      "storage": "1",
+      "varName2": "url",
+      "name": "Store Message Info"
+    },
+    {
+      "member": "2",
+      "varName": "author",
+      "info": "0",
+      "varName2": "",
+      "iftrue": "1",
+      "iftrueVal": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check If Member"
+    },
+    {
+      "channel": "6",
+      "varName": "logs",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Message Edited",
+          "url": "",
+          "color": "YELLOW",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "${tempVars(\"author\")} Edited a message in ${tempVars(\"channel\")}\n\n**Before:**\n```${tempVars(\"before\")}```\n**After:**\n```${tempVars(\"after\")}```\n[Jump To Message](${tempVars(\"url\")})",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "temp2": "after"
+}
